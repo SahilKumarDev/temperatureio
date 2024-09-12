@@ -1,11 +1,10 @@
 'use strict';
 
 // This is API key
-const apiKey = "Add_your_API_key";
+const apiKey = "cac19b5c9897eccbcfeafbb08b7cacc7";
 
 // This is connection between the server(API) and the client(Frontend)
 export const fetchData = (URL, callback) => {
-
   fetch(`${URL}&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => callback(data))

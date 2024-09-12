@@ -2,13 +2,13 @@
 
 // This functionality tells that the Day name in full name
 export const weekDayNames = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 
 // This functionality tells that the month name in three character
