@@ -1,6 +1,6 @@
 'use strict';
 
-// This funcinality tells that the Day name in full name
+// This functionality tells that the Day name in full name
 export const weekDayNames = [
   "Monday",
   "Tuesday",
@@ -11,7 +11,7 @@ export const weekDayNames = [
   "Sunday",
 ];
 
-// This funcinality tells that the month name in three character
+// This functionality tells that the month name in three character
 export const monthNames = [
   "Jan",
   "Feb",
@@ -27,16 +27,16 @@ export const monthNames = [
   "Dec"
 ];
 
-// This funcinality which covernt the API(dt) Date into a Readible Date
+// This functionality which convert the API(dt) Date into a Readable Date
 export const getDate = (dateUnix, timezone) => {
   const date = new Date((dateUnix + timezone) * 1000);
-  const weekDayName = weekDayNames[date.getUTCDay()];
+  const weekDayName = weekDayNames[date.getDay()];
   const monthName = monthNames[date.getUTCMonth()];
 
-  return `${weekDayName} ${date.getUTCDate()} ${monthName}`;
+  return `${weekDayName}, ${date.getUTCDate()} ${monthName}`;
 }
 
-// This funcinality which covernt the API(dt) Time into a Readible Time
+// This functionality which convert the API(dt) Time into a Readable Time
 export const getTime = (timeUnix, timezone) => {
   const date = new Date((timeUnix + timezone) * 1000);
   const hours = date.getUTCHours();
@@ -46,7 +46,7 @@ export const getTime = (timeUnix, timezone) => {
   return `${hours % 12 || 12}:${minutes < 10 ? "0" : ""}${minutes} ${period}`;
 };
 
-// This funcinality which covernt the API(dt) Hours into a Readible Hours
+// This functionality which convert the API(dt) Hours into a Readable Hours
 export const getHours = (timeUnix, timezone) => {
   const date = new Date((timeUnix + timezone) * 1000);
   const hours = date.getUTCHours();
@@ -58,12 +58,12 @@ export const getHours = (timeUnix, timezone) => {
 
 /**
 * 
-* @param {number} mps metter per seconed 
+* @param {number} mps meter per seconds 
 * @returns {number} kilometer per hours
 *
 **/
 
-// This funcinality which convert meter per second into kilometer per hours
+// This functionality which convert meter per second into kilometer per hours
 export const mps_to_kmh = mps => {
   const mph = mps * 3600;
 
