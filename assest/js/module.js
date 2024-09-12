@@ -30,7 +30,7 @@ export const monthNames = [
 // This functionality which convert the API(dt) Date into a Readable Date
 export const getDate = (dateUnix, timezone) => {
   const date = new Date((dateUnix + timezone) * 1000);
-  const weekDayName = weekDayNames[date.getDay()];
+  const weekDayName = weekDayNames[date.getUTCDay()];
   const monthName = monthNames[date.getUTCMonth()];
 
   return `${weekDayName}, ${date.getUTCDate()} ${monthName}`;
